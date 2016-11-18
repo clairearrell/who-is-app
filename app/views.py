@@ -29,12 +29,9 @@ def getIPMetadata():
 		# split the ip address on the . and take the first number
 		qpylib.log('test output', level='info')
 		net1 = context.split('.')[0]
-        #net2 = context.split('.')[1]
 		# The NET-x-0.0.0.1 part of the url
-		#qpylib.log('test output2', level='info')
+		qpylib.log('test output2', level='info')
 		whois_net = 'NET-' + net1 + '-16-0-0-1'
-
-        #whois_net = 'NET-' + net1 + '-' + net2 + '-0-0-1'
 
 		# The full url, adding in the above NET value + the ip address on the end
 		qpylib.log('test output3', level='info')
