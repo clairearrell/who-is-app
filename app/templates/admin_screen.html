@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<div id="wrapper"</div>
+<head>
+  <title>Who Is Configuration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <h1>Who Is Configuration</h1>
+  <p>Please select the information you would like to view when you hover over an IP or domain.</p>
+</div>
+
+<style>
+th {
+    background-color: #4178BE;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: #FFFFFF;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: left;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+</style>
+
+<div class="table-responsive">
+  <table cellspacing="0" cellpadding="0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Network</th>
+        <th>Organisation</th>
+        <th>Point Of Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Net Range</td>
+        <td><input type="checkbox"/>&nbsp;Name</td>
+        <td><input type="checkbox"/>&nbsp;Name</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;CIDR</td>
+        <td><input type="checkbox"/>&nbsp;Handle</td>
+        <td><input type="checkbox"/>&nbsp;Handle</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Name</td>
+        <td><input type="checkbox"/>&nbsp;Street</td>
+        <td><input type="checkbox"/>&nbsp;Company</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Handle</td>
+        <td><input type="checkbox"/>&nbsp;City</td>
+        <td><input type="checkbox"/>&nbsp;Street</td>
+      </tr>
+
+      {% for contact in contacts % }
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Parent</td>
+        <!--<td><input type="checkbox" id="id_{{whois_network.name}}" name="Parent" value="{{whois_network.name}}"</td>-->
+        <td><input type="checkbox"/>&nbsp;State</td>
+        <td><input type="checkbox"/>&nbsp;City</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Net Type</td>
+        <td><input type="checkbox"/>&nbsp;Postal Code</td>
+        <td><input type="checkbox"/>&nbsp;State</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Organisation</td>
+        <td><input type="checkbox"/>&nbsp;Country</td>
+        <td><input type="checkbox"/>&nbsp;Postal Code</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Registration Date</td>
+        <td><input type="checkbox"/>&nbsp;Registration Date</td>
+        <td><input type="checkbox"/>&nbsp;Country</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"/>&nbsp;Last Updated</td>
+        <td><input type="checkbox"/>&nbsp;Last Updated</td>
+        <td><input type="checkbox"/>&nbsp;Last Updated</td>
+      </tr>
+
+      <button style="position: absolute; left: 85%; right: 10%; bottom: 15%;" onclick="return cancel('Are you sure you want to cancel?');"> Cancel </button>
+      <button style="position: absolute; left: 80%; right: 10%; bottom: 15%;"> Save </button>
+
+
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!--<div class="container">
+  <div class="alert alert-info">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Note:</strong> The selected information will only return if it is available
+  </div> -->
+
+
+</body>
+</html>

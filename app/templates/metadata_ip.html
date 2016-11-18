@@ -1,0 +1,128 @@
+{{ip_address}}
+<div>
+  <Style>
+
+    .whois-table {
+      border-collapse: collapse;
+      border: 1px solid black;
+      width: 100%;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .whois-th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+      text-align: left;
+      color: #FFFFFF;
+      background: #4178BE;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .whois-td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+      text-align: left;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+  </style>
+
+{% if whois_information.network is not none %}
+    <table class="whois-table">
+      <tr>
+        <th colspan="2" class="whois-th">Network</th>
+      </tr>
+      {% if whois_information.network.registration_date is not none %}
+      <tr>
+        <td class="whois-td">Registration Date</td>
+        <td class="whois-td">{{ whois_information.network.registration_date }}</td>
+      </tr>
+      {% endif %}
+      {% if whois_information.network.handle is not none %}
+      <tr>
+        <td class="whois-td">Handle</td>
+        <td class="whois-td">{{ whois_information.network.handle }}</td>
+      </tr>
+      {% endif %}
+      {% if whois_information.network.net_type is not none %}
+      <tr>
+        <td class="whois-td">Net Type</td>
+        <td class="whois-td">{{ whois_information.network.net_type }}</td>
+      </tr>
+      {% endif %}
+      {% if whois_information.network.last_updated is not none %}
+      <tr>
+        <td class="whois-td">Last Updated</td>
+        <td class="whois-td">{{ whois_information.network.last_updated }}</td>
+      </tr>-->
+      {% endif %}-->
+      {% if whois_information.network.parent is not none %}
+      <tr>
+        <td class="whois-td">Parent</td>
+        <td class="whois-td">{{ whois_information.network.parent }}</td>
+      </tr>
+      {% endif %}
+  </table>
+{% endif %}
+
+<br>
+ {% if whois_information.organisation is not none %}
+   <table class="whois-table">
+     <tr>
+       <th colspan="2" class="whois-th">Organisation</th>
+     </tr>
+     {% if whois_information.organisation.name is not none %}
+       <tr>
+         <td class="whois-td">Name</td>
+         <td class="whois-td">{{ whois_information.organisation.name }}</td>
+       </tr>
+     {% endif %}
+     {% if whois_information.organisation.city is not none %}
+       <tr>
+         <td class="whois-td">City</td>
+         <td class="whois-td">{{ whois_information.organisation.city }}</td>
+       </tr>
+     {% endif %}
+     {% if whois_information.organisation.startAddress is not none %}
+       <tr>
+        <td class="whois-td">Start Address</td>
+        <td class="whois-td">{{ whois_information.organisation.startAddress }}</td>
+       </tr>
+     {% endif %}
+     {% if whois_information.organisation.cidrLength is not none %}
+       <tr>
+         <td class="whois-td">CIDR Length</td>
+         <td class="whois-td">{{ whois_information.organisation.cidrLength }}</td>
+       </tr>
+     {% endif %}
+  </table>
+{% endif %}
+</br>
+{% if whois_information.contact is not none %}
+  <table class="whois-table">
+    <tr>
+      <th colspan="2" class="whois-th">Contact</th>
+    </tr>
+    {% if whois_information.contact.name is not none %}
+      <tr>
+        <td class="whois-td">Name</td>
+        <td class="whois-td">{{ whois_information.contact.name }}</td>
+      </tr>
+    {% endif %}
+<!-- {% if whois_information.organisation.handle is not none %}
+      <tr>
+        <td class="whois-td">Handle</td>
+        <td class="whois-td">{{ whois_information.organisation.handle }}</td>
+      </tr>
+    {% endif %}
+    {% if whois_information.organisation.street is not none %}
+      <tr>
+        <td class="whois-td">Street</td>
+        <td class="whois-td">{{ whois_information.organisation.street }}</td>
+     </tr>
+    {% endif %} -->
+   </table>
+{% endif %}
+</div>
