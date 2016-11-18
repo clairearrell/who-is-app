@@ -79,7 +79,7 @@ def parsePopupInfo(information_json):
 	whois_network.registration_date = information_json['ns4:pft']['net']['registrationDate']['$']
 	whois_network.handle = information_json['ns4:pft']['net']['handle']['$']
 	whois_network.net_type = information_json['ns4:pft']['net']['netBlocks']['netBlock']['description']['$']
-	whois_network.last_updated = information_json['ns4:pft']['net']['comment']['line']['updateDate']['$']
+#	whois_network.last_updated = information_json['ns4:pft']['net']['comment']['line']['updateDate']['$']
 	whois_network.parent = information_json['ns4:pft']['net']['parentNetRef']['@handle']
 
 	log_msg = 'parsePopupInfo: Adding whois network [%s] to whois information' % str(qpylib.to_json_dict(whois_network))
